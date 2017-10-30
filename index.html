@@ -136,9 +136,13 @@
     return convertBase(hexStr, 16, 10)
   }
 
-  document.querySelector('#convert').addEventListener('click', function () {
+  var convert = document.querySelector('#convert')
+  var input = document.querySelector('#input')
+  input.value = '5DF269CB0583CA185F34728C852C61EE'
+
+  convert.addEventListener('click', function () {
     document.querySelector('#output-wrap').style.display = 'block'
-    document.querySelector('#output').innerHTML = hexToDec('1E42483343E15F534F66C8D6883481CD')
+    document.querySelector('#output').innerHTML = hexToDec(input.value)
   })
 </script>
 </body>
